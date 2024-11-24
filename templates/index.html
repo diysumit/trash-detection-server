@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Image Upload</title>
+      <style>
+            body {
+                  font-family: Arial, sans-serif;
+                  margin: 0;
+                  padding: 0;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 100vh;
+                  background-color: #f9f9f9;
+            }
+
+            .container {
+                  text-align: center;
+                  background: #fff;
+                  padding: 20px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                  border-radius: 8px;
+            }
+
+            .upload-btn {
+                  display: inline-block;
+                  margin: 20px 0;
+                  padding: 10px 20px;
+                  font-size: 16px;
+                  color: #fff;
+                  background-color: #007BFF;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+            }
+
+            .upload-btn:hover {
+                  background-color: #0056b3;
+            }
+
+            p {
+                  font-size: 14px;
+                  color: #555;
+                  margin-top: 20px;
+            }
+
+            a {
+                  text-decoration: none;
+                  color: #007BFF;
+            }
+
+            a:hover {
+                  text-decoration: underline;
+                  color: #0056b3;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="container">
+            <h1>Upload an Image</h1>
+            <form action="/detect" method="post" enctype="multipart/form-data">
+                  <label for="file-upload">Select an image:</label>
+                  <input id="file-upload" type="file" name="file" accept="image/*">
+                  <br>
+                  <button class="upload-btn" type="submit">Upload</button>
+            </form>
+            <hr>
+            <h3>Or Upload Using CURL</h3>
+            <code>
+            curl -X POST -F "file=@path_to_your_image.jpg" http://127.0.0.1:5000/detect
+        </code>
+            <p>
+                  This work is licensed under a
+                  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="license noopener">
+                        Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+                  </a>.
+            </p>
+      </div>
+      <script>
+            document.querySelector("form").addEventListener("submit", function (event) {
+                  const fileInput = document.querySelector('input[type="file"]');
+                  if (!fileInput.value) {
+                        event.preventDefault();
+                        alert("Please select a file to upload!");
+                  }
+            });
+      </script>
+</body>
+
+</html>

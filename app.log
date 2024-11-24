@@ -1,0 +1,85 @@
+2024-11-25 02:02:09,299 - INFO - Loading YOLO model from: ./yolo11n.pt
+2024-11-25 02:02:09,349 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.2:8000
+2024-11-25 02:02:09,349 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-25 02:02:12,433 - INFO - The n-dim image array: [255 216 255 ... 127 255 217]
+2024-11-25 02:02:12,898 - INFO - Results of model: ultralytics.engine.results.Results object with attributes:
+
+boxes: ultralytics.engine.results.Boxes object
+keypoints: None
+masks: None
+names: {0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5: 'bus', 6: 'train', 7: 'truck', 8: 'boat', 9: 'traffic light', 10: 'fire hydrant', 11: 'stop sign', 12: 'parking meter', 13: 'bench', 14: 'bird', 15: 'cat', 16: 'dog', 17: 'horse', 18: 'sheep', 19: 'cow', 20: 'elephant', 21: 'bear', 22: 'zebra', 23: 'giraffe', 24: 'backpack', 25: 'umbrella', 26: 'handbag', 27: 'tie', 28: 'suitcase', 29: 'frisbee', 30: 'skis', 31: 'snowboard', 32: 'sports ball', 33: 'kite', 34: 'baseball bat', 35: 'baseball glove', 36: 'skateboard', 37: 'surfboard', 38: 'tennis racket', 39: 'bottle', 40: 'wine glass', 41: 'cup', 42: 'fork', 43: 'knife', 44: 'spoon', 45: 'bowl', 46: 'banana', 47: 'apple', 48: 'sandwich', 49: 'orange', 50: 'broccoli', 51: 'carrot', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'cake', 56: 'chair', 57: 'couch', 58: 'potted plant', 59: 'bed', 60: 'dining table', 61: 'toilet', 62: 'tv', 63: 'laptop', 64: 'mouse', 65: 'remote', 66: 'keyboard', 67: 'cell phone', 68: 'microwave', 69: 'oven', 70: 'toaster', 71: 'sink', 72: 'refrigerator', 73: 'book', 74: 'clock', 75: 'vase', 76: 'scissors', 77: 'teddy bear', 78: 'hair drier', 79: 'toothbrush'}
+obb: None
+orig_img: array([[[ 66,  75,  94],
+        [ 54,  72,  89],
+        [ 55,  75,  94],
+        ...,
+        [146, 192, 189],
+        [137, 165, 162],
+        [121, 144, 149]],
+
+       [[ 48,  61,  71],
+        [ 47,  67,  80],
+        [ 47,  69,  84],
+        ...,
+        [159, 203, 217],
+        [161, 196, 202],
+        [150, 183, 190]],
+
+       [[ 34,  50,  52],
+        [ 48,  69,  78],
+        [ 47,  69,  81],
+        ...,
+        [153, 195, 227],
+        [161, 205, 223],
+        [162, 203, 218]],
+
+       ...,
+
+       [[  1,   1,   1],
+        [  1,   1,   1],
+        [  1,   1,   1],
+        ...,
+        [  1,   1,   1],
+        [  1,   1,   1],
+        [  1,   1,   1]],
+
+       [[  1,   1,   1],
+        [  1,   1,   1],
+        [  1,   1,   1],
+        ...,
+        [  1,   1,   1],
+        [  1,   1,   1],
+        [  1,   1,   1]],
+
+       [[  1,   1,   1],
+        [  1,   1,   1],
+        [  1,   1,   1],
+        ...,
+        [  1,   1,   1],
+        [  1,   1,   1],
+        [  1,   1,   1]]], dtype=uint8)
+orig_shape: (640, 640)
+path: 'image0.jpg'
+probs: None
+save_dir: 'runs/detect/predict'
+speed: {'preprocess': 1.7809867858886719, 'inference': 80.74712753295898, 'postprocess': 1.1179447174072266}
+2024-11-25 02:02:12,898 - INFO - Result Datatype: <class 'ultralytics.engine.results.Results'>
+2024-11-25 02:02:12,900 - INFO - ultralytics.engine.results.Boxes object with attributes:
+
+cls: tensor([39.])
+conf: tensor([0.4482])
+data: tensor([[1.9150e+02, 1.9773e+02, 4.5075e+02, 3.7550e+02, 4.4824e-01, 3.9000e+01]])
+id: None
+is_track: False
+orig_shape: (640, 640)
+shape: torch.Size([1, 6])
+xywh: tensor([[321.1284, 286.6163, 259.2485, 177.7632]])
+xywhn: tensor([[0.5018, 0.4478, 0.4051, 0.2778]])
+xyxy: tensor([[191.5042, 197.7347, 450.7527, 375.4979]])
+xyxyn: tensor([[0.2992, 0.3090, 0.7043, 0.5867]])
+2024-11-25 02:02:12,900 - INFO - Detections: [[      191.5      197.73      450.75       375.5     0.44824          39]]
+2024-11-25 02:02:12,900 - INFO - Loading YOLO model from: ./yolo11n.pt
+2024-11-25 02:02:12,901 - INFO - 127.0.0.1 - - [25/Nov/2024 02:02:12] "[32mPOST /detect HTTP/1.1[0m" 302 -
